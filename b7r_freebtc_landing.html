@@ -1,0 +1,254 @@
+# Creating a professional single-page landing HTML file for the user's referral campaign.
+html = r"""<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>B7R Bitcoin Rewards — اكسب بيتكوين مجاني كل ساعة</title>
+  <meta name="description" content="اكسب بيتكوين مجانا كل 60 دقيقة عبر FreeBitco.in. سجل الآن عبر رابط الإحالة للحصول على مكافأتك أولاً.">
+  <meta name="keywords" content="Freebitco,in,بيتكوين مجاني,ربح بيتكوين,فاست,فوسيت">
+  <meta name="author" content="بحر - B7R Rewards">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="اكسب بيتكوين مجاني كل ساعة — B7R Rewards">
+  <meta property="og:description" content="سجل في FreeBitco.in واحصل على بيتكوين مجاني كل 60 دقيقة باستخدام رابط الإحالة الخاص بي.">
+  <meta property="og:image" content="https://static1.freebitco.in/banners/728x90-3.png">
+  <meta property="og:url" content="https://b7r-rewards.example/">
+  <meta property="og:type" content="website">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"B7R Bitcoin Rewards",
+    "url":"https://b7r-rewards.example/",
+    "description":"صفحة لربط الزوار بمنصة FreeBitco.in لكسب بيتكوين مجاني كل ساعة عبر رابط إحالة."
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b0b0f; --card:#0f1114; --muted:#9aa3b2; --gold:#c19728; --accent:#00d1b2;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box;font-family: 'Segoe UI', Tahoma, Arial, sans-serif}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#050507 0%, #0b0b0f 100%);color:#eaf0f6}
+    .container{max-width:1100px;margin:28px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:54px;height:54px;border-radius:10px;background:linear-gradient(135deg,var(--gold),#ffd36b);display:flex;align-items:center;justify-content:center;color:#050507;font-weight:700;font-size:20px;box-shadow:0 6px 20px rgba(193,151,40,0.12)}
+    h1{margin:0;font-size:20px}
+    .cta{display:flex;gap:10px;align-items:center}
+    .btn{background:var(--gold);color:#050507;padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(193,151,40,0.14)}
+
+/* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;margin-top:28px;align-items:center}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:26px;border-radius:16px;box-shadow:0 10px 40px rgba(2,6,23,0.6)}
+    .hero-card h2{font-size:30px;margin:0 0 12px}
+    .hero-card p{color:var(--muted);margin:0 0 18px;line-height:1.6}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 16px;border-radius:10px;color:var(--gold);text-decoration:none;font-weight:700}
+    .stats{display:flex;gap:14px;margin-top:18px}
+    .stat{background:var(--glass);padding:12px;border-radius:10px;min-width:120px;text-align:center}
+    .stat .num{font-size:18px;font-weight:800;color:var(--gold)}
+    .stat .lbl{color:var(--muted);font-size:13px}
+
+/* right panel */
+    .panel{background:linear-gradient(180deg,#0e1114, #0b0d10);padding:16px;border-radius:12px}
+    .panel .banner{width:100%;border-radius:10px;display:block}
+
+/* features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+    .feature{background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);padding:16px;border-radius:12px}
+    .feature h4{margin:0 0 8px;color:var(--gold)}
+
+/* video */
+    .video-wrap{margin-top:22px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;display:flex;gap:12px;align-items:center}
+    .video-thumb{flex:1;min-height:160px;border-radius:10px;background:#0c0c0e;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .play{position:absolute;width:70px;height:70px;border-radius:50%;background:rgba(193,151,40,0.95);display:flex;align-items:center;justify-content:center;color:#050507;font-weight:900;font-size:28px;cursor:pointer;border:4px solid rgba(255,255,255,0.06)}
+    .video-desc{min-width:220px;color:var(--muted);font-size:14px}
+
+/* FAQ */
+    .faq{margin-top:26px}
+    .accordion{background:var(--card);padding:0;border-radius:10px;overflow:hidden}
+    .acc-item{border-bottom:1px solid rgba(255,255,255,0.03)}
+    .acc-q{padding:14px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .acc-a{padding:14px;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted);display:none}
+
+/* footer */
+    footer{margin-top:30px;padding:18px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+    .socials a{margin-left:8px;text-decoration:none;color:var(--muted)}
+
+/* responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr;}.features{grid-template-columns:1fr 1fr}.panel{order:2}}
+    @media (max-width:560px){.features{grid-template-columns:1fr}.logo h1{font-size:16px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">B7R</div>
+        <div>
+          <h1>B7R Bitcoin Rewards</h1>
+          <div style="color:var(--muted);font-size:13px">اكسب بيتكوين مجاني كل 60 دقيقة عبر FreeBitco.in</div>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn" id="top-cta" href="https://freebitco.in/?r=55168202" target="_blank">ابدأ الآن — ادعمني ❤️</a>
+        <a class="btn-ghost" href="#faq">الأسئلة الشائعة</a>
+      </div>
+    </header>
+
+    <main class="hero">
+      <section class="hero-card">
+        <h2>💰 اكسب بيتكوين مجاني كل ساعة — سهل وسريع</h2>
+        <p>سجل عبر رابط الإحالة الخاص بي وادّع مكافأتك كل 60 دقيقة. شرح مبسّط، نصائح للسحب، وكيفية زيادة الأرباح. موقع موثوق ويعمل منذ سنوات.</p>
+
+        <div class="hero-cta">
+          <a class="btn" href="https://freebitco.in/?r=55168202" target="_blank">ادخل الآن وابدأ الربح</a>
+          <a class="btn-ghost" id="how-it-works" href="#how">كيف يعمل؟</a>
+          <a class="btn-ghost" id="download-banner" href="#banners">تحميل البنرات</a>
+        </div>
+
+        <div class="stats" aria-hidden="true">
+          <div class="stat"><div class="num">+201K</div><div class="lbl">زائر سعيد</div></div>
+          <div class="stat"><div class="num">100%</div><div class="lbl">موثوق منذ 2013</div></div>
+          <div class="stat"><div class="num">كل 60 دقيقة</div><div class="lbl">فرصة ربح</div></div>
+        </div>
+
+        <div class="features">
+          <div class="feature"><h4>مجاناً</h4><div class="muted">لا يحتاج أي إيداع — ابدأ فوراً.</div></div>
+          <div class="feature"><h4>عملات متعددة</h4><div class="muted">BTC، ETH، USDT وغيرها.</div></div>
+          <div class="feature"><h4>سحب مباشر</h4><div class="muted">سحب الأموال لمحفظتك عند الوصول للحد الأدنى.</div></div>
+        </div>
+
+        <div class="video-wrap" style="margin-top:20px">
+          <div class="video-thumb" id="videoThumb">
+            <img src="https://static1.freebitco.in/banners/728x90-3.png" alt="promo" style="max-width:100%;opacity:0.95">
+            <div class="play" onclick="openLandingVideo()">▶</div>
+          </div>
+          <div class="video-desc">
+            <strong>فيديو سريع (1:05)</strong>
+            <p style="margin:8px 0;color:var(--muted)">شاهد شرحًا سريعًا عن طريقة التسجيل واستلام المكافآت. عند النقر سيتم تحويلك إلى صفحة التوجيه مع زر التسجيل.</p>
+            <a class="btn-ghost" href="https://freebitco.in/?r=55168202" target="_blank">ادخل الآن</a>
+          </div>
+        </div>
+
+        <div id="how" style="margin-top:22px">
+          <h3 style="margin:6px 0 10px">كيف يعمل الموقع؟</h3>
+          <ol style="color:var(--muted);line-height:1.7">
+            <li>التسجيل عبر رابط الإحالة</li>
+            <li>المطالبة بالمكافأة كل 60 دقيقة</li>
+            <li>تجميع الرصيد والسحب إلى محفظتك</li>
+          </ol>
+        </div>
+
+      </section>
+
+      <aside class="panel">
+        <img class="banner" src="https://static1.freebitco.in/banners/728x90-3.png" alt="banner">
+        <div style="margin-top:12px">
+          <h4 style="margin:0 0 8px">روابط سريعة</h4>
+          <a class="btn-ghost" href="https://freebitco.in/?r=55168202" target="_blank" style="display:inline-block;margin-bottom:8px">الانضمام عبر رابط الإحالة</a>
+          <a class="btn-ghost" href="https://static1.freebitco.in/banners/728x90-3.png" target="_blank" style="display:inline-block;margin-bottom:8px">فتح البنر 728×90</a>
+          <a class="btn-ghost" href="https://static1.freebitco.in/banners/468x60-3.png" target="_blank" style="display:inline-block;">فتح البنر 468×60</a>
+        </div>
+
+        <div style="margin-top:18px">
+          <h4 style="margin:0 0 8px">ماذا أفعل بعد التسجيل؟</h4>
+          <ul style="color:var(--muted);padding-left:18px;line-height:1.7">
+            <li>ادّعِ المكافأة كل ساعة</li>
+            <li>لا تستخدم الألعاب إن لم تكن متأكداً</li>
+            <li>اجمع حتى تصل للحد الأدنى للسحب</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <section id="banners" class="hero-card" style="margin-top:18px">
+      <h3>البنرات الجاهزة</h3>
+      <p style="color:var(--muted)">يمكنك تحميل البنرات مباشرة واستخدامها في مدونتك أو حملاتك الإعلانية.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+        <a href="https://static1.freebitco.in/banners/728x90-3.png" target="_blank"><img src="https://static1.freebitco.in/banners/728x90-3.png" alt="728" style="border-radius:8px;max-width:100%"></a>
+        <a href="https://static1.freebitco.in/banners/468x60-3.png" target="_blank"><img src="https://static1.freebitco.in/banners/468x60-3.png" alt="468" style="border-radius:8px;max-width:100%"></a>
+      </div>
+      <div style="margin-top:14px">
+        <h4>كود البنر (HTML)</h4>
+        <pre style="background:#05060a;padding:12px;border-radius:8px;color:#b9d2ff;overflow:auto">
+&lt;a href="https://freebitco.in/?r=55168202" target="_blank"&gt;
+  &lt;img src="https://static1.freebitco.in/banners/728x90-3.png" alt="Free Bitcoin Banner" /&gt;
+&lt;/a&gt;
+        </pre>
+      </div>
+    </section>
+
+    <section id="faq" class="hero-card faq">
+      <h3>الأسئلة الشائعة</h3>
+      <div class="accordion" id="accordion">
+        <div class="acc-item">
+          <div class="acc-q">هل الموقع موثوق؟ <span style="color:var(--muted)">+</span></div>
+          <div class="acc-a">نعم، FreeBitco.in من أقدم منصات الـfaucet ويعمل منذ 2013. لكن دائماً تأكد من استخدام محفظتك الخاصة.</div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-q">هل يحتاج إيداع؟ <span style="color:var(--muted)">+</span></div>
+          <div class="acc-a">لا، المطالبات الأساسية مجانية دون إيداع. لكن بعض الميزات قد تحتاج رصيد.</div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-q">كم يمكنني أن أربح؟ <span style="color:var(--muted)">+</span></div>
+          <div class="acc-a">المكافآت متغيرة وتعتمد على الحظ وعدد المطالبات. لا تعتمد كدخل رئيسي.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© B7R Rewards — جميع الحقوق محفوظة</div>
+      <div class="socials">
+        <a href="https://twitter.com" target="_blank">X</a>
+        <a href="#" target="_blank">Telegram</a>
+        <a href="#" target="_blank">Instagram</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // accordion
+    document.querySelectorAll('.acc-q').forEach(q=>{
+      q.addEventListener('click', ()=>{
+        const a=q.nextElementSibling;
+        const open = a.style.display === 'block';
+        document.querySelectorAll('.acc-a').forEach(x=>x.style.display='none');
+        a.style.display = open ? 'none' : 'block';
+      });
+    });
+
+    function openLandingVideo(){
+      // Open the referral link in a new tab (user asked earlier to move user on click)
+      window.open('https://freebitco.in/?r=55168202','_blank');
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+
+    // Optional: track outbound clicks (simple)
+    document.getElementById('top-cta').addEventListener('click', function(){
+      try{ if(window.ga) ga('send','event','outbound','click','referral'); }catch(e){}
+    });
+  </script>
+</body>
+</html>
+"""
+
+path = "/mnt/data/b7r_freebtc_landing.html"
+with open(path, "w", encoding="utf-8") as f:
+    f.write(html)
+
+path
